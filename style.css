@@ -120,3 +120,63 @@
     color: var(--Lightgrayishviolet);
 }
 /* decoration container*/
+
+/* form section */
+
+.form__section{
+  display: grid;
+  place-items: center ;
+}
+#form{
+  max-width: 380px;
+  margin-left: 130px;
+
+  display: grid;
+  gap: 20px;
+}
+.form_name, .form_number{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+input{
+  border: 1px solid var(--Lightgrayishviolet);
+  padding: 5px;
+  border-radius: 5px;
+}
+input:focus{
+  outline-color: var(--Verydarkviolet);
+}
+label{
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: .8rem;
+}
+
+#date, #year{
+  max-width: 43%;
+}
+.form_details{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button{
+  padding: 10px 5px;
+  border: none;
+  color: var(--Lightgrayishviolet);
+  background-color: var(--Verydarkviolet);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 300ms ease-in-out;
+}
+button:hover{
+  filter: brightness(2.5);
+}
+/* form section */
+
+@media screen and (max-width:1051px) {
+  
+}
