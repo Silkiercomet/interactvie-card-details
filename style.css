@@ -172,16 +172,20 @@ label {
   font-size: 0.8rem;
 }
 
-#date,
-#year {
-  max-width: 43%;
-}
+
 .form_details {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   justify-content: center;
   align-items: center;
 }
-
+.form_date_fields{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+#date,#year{
+  width: 90%;
+}
 button {
   padding: 10px 5px;
   border: none;
@@ -265,4 +269,15 @@ button:hover {
     width: 100%;
   }
   /* form */
+}
+/* Chrome, Safari, Edge, Opera remove arrows from number input type*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
