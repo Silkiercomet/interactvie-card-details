@@ -1,169 +1,188 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
-:root{
---Lightgrayishviolet:hsl(270,3%,87%);
---Darkgrayishviolet:hsl(279,6%,55%);
---Verydarkviolet:hsl(278,68%,11%);
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+:root {
+  --Lightgrayishviolet: hsl(270, 3%, 87%);
+  --Darkgrayishviolet: hsl(279, 6%, 55%);
+  --Verydarkviolet: hsl(278, 68%, 11%);
 }
 /*
   1. Use a more-intuitive box-sizing model.
 */
-*, *::before, *::after {
-    box-sizing: border-box;
-  }
-  /*
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
     2. Remove default margin
   */
-  * {
-    margin: 0;
-  }
-  /*
+* {
+  margin: 0;
+}
+/*
     Typographic tweaks!
     3. Add accessible line-height
     4. Improve text rendering
   */
-  body {
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-    font-family: 'Space Grotesk', sans-serif;
-
-  }
-  /*
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Space Grotesk", sans-serif;
+}
+/*
     5. Improve media defaults
   */
-  img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
-  }
-  /*
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
     6. Remove built-in form typography styles
   */
-  input, button, textarea, select {
-    font: inherit;
-  }
-  /*
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
     7. Avoid text overflows
   */
-  p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
-  }
-.completed_state{
-    display: none;
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+.completed_state {
+  display: none;
 }
 /* wrapper container*/
 
-.wrapper{
-    display: grid;
-    grid-template-columns: 40% 60%; 
-    min-height: 100vh;
+.wrapper {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  min-height: 100vh;
 }
 
 /* wrapper container*/
 
 /* decoration container*/
 
-.decoration{
-    position: relative;
-    background-image: url(./images/bg-main-desktop.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    overflow-y: visible;
+.decoration {
+  position: relative;
+  background-image: url(./images/bg-main-desktop.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow-y: visible;
 }
-.card_front{
-    position: absolute;
-    right: -130px;
-    top: 100px;
-    max-width: 400px;
+.card_front {
+  position: absolute;
+  right: -130px;
+  top: 100px;
+  max-width: 400px;
 }
-.card_front_img{
-    position: relative;
+.card_front_img {
+  position: relative;
+}
+.card_logo,
+.card_number {
+  position: absolute;
+}
+.card_logo {
+  left: 25px;
+  top: 25px;
+}
+.card_number {
+  left: 25px;
+  bottom: 70px;
+  font-size: 1.6rem;
+  color: var(--Lightgrayishviolet);
+  letter-spacing: 2px;
+}
+.card_info {
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 50px);
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  color: var(--Lightgrayishviolet);
+}
 
+.card_back {
+  position: absolute;
+  top: 350px;
+  right: -180px;
+  max-width: 400px;
 }
-.card_logo, .card_number{
-    position: absolute;
+.card_back img {
+  position: relative;
 }
-.card_logo{
-    
-    left: 25px;
-    top: 25px;
-}
-.card_number{
-    left: 25px;
-    bottom: 70px;
-    font-size: 1.6rem;
-    color: var(--Lightgrayishviolet);
-}
-.card_info{
-    position: absolute;
-    bottom: 25px;
-    display: flex;
-    justify-content: space-between;
-    width: calc(100% - 50px);
-    left: 0;
-    right: 0;
-    margin-inline: auto;
-    color: var(--Lightgrayishviolet);
-}
-
-.card_back{
-    position: absolute;
-    top: 350px;
-    right: -180px;
-    max-width: 400px;
-}
-.card_back img{
-    position: relative;
-}
-.back__number{
-    position: absolute;
-    right: 50px;
-    top: 96px;
-    color: var(--Lightgrayishviolet);
+.back__number {
+  position: absolute;
+  right: 50px;
+  top: 96px;
+  color: var(--Lightgrayishviolet);
 }
 /* decoration container*/
 
 /* form section */
 
-.form__section{
+.form__section {
   display: grid;
-  place-items: center ;
+  place-items: center;
 }
-#form{
+#form {
   max-width: 380px;
   margin-left: 130px;
 
   display: grid;
   gap: 20px;
 }
-.form_name, .form_number{
+.form_name,
+.form_number {
   display: flex;
   flex-direction: column;
   position: relative;
 }
 
-input{
+input {
   border: 1px solid var(--Lightgrayishviolet);
   padding: 5px;
   border-radius: 5px;
 }
-input:focus{
+input:focus {
   outline-color: var(--Verydarkviolet);
 }
-label{
+label {
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
-#date, #year{
+#date,
+#year {
   max-width: 43%;
 }
-.form_details{
+.form_details {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-button{
+button {
   padding: 10px 5px;
   border: none;
   color: var(--Lightgrayishviolet);
@@ -172,11 +191,78 @@ button{
   cursor: pointer;
   transition: 300ms ease-in-out;
 }
-button:hover{
+button:hover {
   filter: brightness(2.5);
 }
 /* form section */
 
-@media screen and (max-width:1051px) {
-  
+@media screen and (width < 1051px) {
+  .card_front {
+    position: absolute;
+    right: -50px;
+    top: 100px;
+    max-width: 400px;
+  }
+  .card_back {
+    position: absolute;
+    top: 350px;
+    right: -100px;
+    max-width: 400px;
+  }
+}
+@media screen and (width <= 875px) {
+  .wrapper {
+    overflow-x: hidden;
+    grid-template-columns: 1fr;
+    grid-template-rows: 40% 60%;
+  }
+  .card_front {
+    right: 0px;
+    left: 0;
+    margin-inline: auto;
+    top: initial;
+    bottom: -50px;
+    max-width: 350px;
+    z-index: 99;
+    transform: translateX(-40px);
+  }
+  .card_back {
+    position: absolute;
+    right: 0px;
+    left: 0;
+    margin-inline: auto;
+    top: 35px;
+    transform: translateX(40px);
+    max-width: 350px;
+  }
+  #form {
+    margin-left: 0;
+  }
+  .decoration {
+    min-height: 250px;
+  }
+  .card_number {
+    left: 25px;
+    bottom: 50px;
+    font-size: 1.4rem;
+  }
+  .back__number {
+    position: absolute;
+    right: 50px;
+    top: 85px;
+    color: var(--Lightgrayishviolet);
+  }
+  /* form */
+
+  .form__section {
+    margin-block: 90px;
+  }
+  button,
+  input {
+    max-width: 90%;
+  }
+  #form {
+    width: 100%;
+  }
+  /* form */
 }
