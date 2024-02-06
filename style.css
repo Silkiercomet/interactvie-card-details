@@ -63,7 +63,7 @@ h6 {
 
 /* animations */
 
-.hide{
+.hide {
   opacity: 0;
   transition: 300ms ease-in-out;
 }
@@ -81,12 +81,12 @@ h6 {
 
 /* thank you */
 
-.completed_state{
+.completed_state {
   display: grid;
   gap: 15px;
   place-items: center;
 }
-.completed_state > button{
+.completed_state > button {
   min-width: 100%;
 }
 /* thank you */
@@ -109,7 +109,13 @@ h6 {
 .card_front_img {
   position: relative;
 }
-#card_number, #card_month, #card_year, #card_name, .back__number, #form, .completed_state{
+#card_number,
+#card_month,
+#card_year,
+#card_name,
+.back__number,
+#form,
+.completed_state {
   transition: 300ms ease-in-out;
 }
 .card_logo,
@@ -169,7 +175,6 @@ h6 {
 }
 .form {
   max-width: 380px;
-  
 
   display: grid;
   gap: 20px;
@@ -195,18 +200,18 @@ label {
   font-size: 0.8rem;
 }
 
-
 .form_details {
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-content: center;
   align-items: center;
 }
-.form_date_fields{
+.form_date_fields {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-#date,#year{
+#date,
+#year {
   width: 90%;
 }
 button {
@@ -236,7 +241,7 @@ button:hover {
     right: -100px;
     max-width: 400px;
   }
-  .form__section{
+  .form__section {
     padding-left: 0;
   }
 }
@@ -304,7 +309,7 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox */
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
 
