@@ -60,9 +60,15 @@ h5,
 h6 {
   overflow-wrap: break-word;
 }
-.completed_state {
-  display: none;
+
+/* animations */
+
+.hide{
+  opacity: 0;
+  transition: 300ms ease-in-out;
 }
+
+/* animations */
 /* wrapper container*/
 
 .wrapper {
@@ -72,6 +78,18 @@ h6 {
 }
 
 /* wrapper container*/
+
+/* thank you */
+
+.completed_state{
+  display: grid;
+  gap: 15px;
+  place-items: center;
+}
+.completed_state > button{
+  min-width: 100%;
+}
+/* thank you */
 
 /* decoration container*/
 
@@ -90,6 +108,9 @@ h6 {
 }
 .card_front_img {
   position: relative;
+}
+#card_number, #card_month, #card_year, #card_name, .back__number, #form, .completed_state{
+  transition: 300ms ease-in-out;
 }
 .card_logo,
 .card_number {
@@ -135,6 +156,7 @@ h6 {
   right: 50px;
   top: 96px;
   color: var(--Lightgrayishviolet);
+  transition: 300ms ease-in-out;
 }
 /* decoration container*/
 
@@ -143,10 +165,11 @@ h6 {
 .form__section {
   display: grid;
   place-items: center;
+  padding-left: 130px;
 }
-#form {
+.form {
   max-width: 380px;
-  margin-left: 130px;
+  
 
   display: grid;
   gap: 20px;
@@ -213,6 +236,9 @@ button:hover {
     right: -100px;
     max-width: 400px;
   }
+  .form__section{
+    padding-left: 0;
+  }
 }
 @media screen and (width <= 875px) {
   .wrapper {
@@ -239,7 +265,7 @@ button:hover {
     transform: translateX(40px);
     max-width: 350px;
   }
-  #form {
+  .form {
     margin-left: 0;
   }
   .decoration {
@@ -263,9 +289,9 @@ button:hover {
   }
   button,
   input {
-    max-width: 90%;
+    max-width: 100%;
   }
-  #form {
+  .form {
     width: 100%;
   }
   /* form */
@@ -280,4 +306,9 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
+}
+
+/* none state */
+.none {
+  display: none;
 }

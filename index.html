@@ -33,7 +33,7 @@
       </figure>
     </section>
     <main class="form__section">
-      <form id="form">
+      <form id="form" class="form">
         <div class="form_name">
           <label for="name">Cardholder Name</label>
           <input type="text" name="name" id="name" placeholder="e.g. Jane Appleseed" required maxlength="20" minlength="2">
@@ -58,11 +58,11 @@
         <button type="submit">Confirm</button>
       </form>
        <!-- Completed state start -->
-      <div class="completed_state">
+      <div class="completed_state none">
         <img src="./images/icon-complete.svg" alt="completed">
         <h2>Thank you!</h2>
         <p>We've added your card details</p>
-        <button>Continue</button>
+        <button id="thankbtn">Continue</button>
       </div>
     </main>
   </div>
